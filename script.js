@@ -78,31 +78,10 @@ player2button.addEventListener('click', () => {
    
 })
 player3button.addEventListener('click', () => {
-    countattempttwo++
     heighlight.innerHTML --
     notice.innerHTML = `Guess the number and you have ${heighlight.innerHTML} chance only`;
+    countattempttwo++
 
-    if (countattempttwo <= 5){
-        if((player1input.value == player2input.value) && (player1input.value == player3input.value)){
-            guess_emoji.style = 'display: none;';
-            win_emoji.style = 'display: block;';
-            player.innerHTML = 'Player 2 & 3 winner';
-            player3button.style ='display: none;';
-            player3input.style = 'display: none;';
-            notice.innerHTML = 'Congratulations';
-        }
-    }
-    if (countattempttwo == 5) {
-        if((player1input.value == player2input.value)){
-            guess_emoji.style = 'display: none;';
-            win_emoji.style = 'display: block;';
-            player.innerHTML = 'Player 2 winner';
-            player3button.style ='display: none;';
-            player3input.style = 'display: none;';
-            notice.innerHTML = 'Congratulations';
-        }
-
-    }
     if (countattempttwo <= 5) {
         if(player1input.value == player3input.value){
             guess_emoji.style = 'display: none;';
@@ -112,8 +91,28 @@ player3button.addEventListener('click', () => {
             player3input.style = 'display: none;';
             notice.innerHTML = 'Congratulations';
         }
-
     }
+ 
+    if((countattempttwo <= 5) && (player1input.value == player2input.value) && (player1input.value == player3input.value)){
+        console.log(countattempttwo);
+        guess_emoji.style = 'display: none;';
+        win_emoji.style = 'display: block;';
+        player.innerHTML = 'Player 2 & 3 winner';
+        player3button.style ='display: none;';
+        player3input.style = 'display: none;';
+        notice.innerHTML = 'Congratulations test';
+        console.log(1234654)
+    }else if((countattempttwo == 5) && (player1input.value == player2input.value)){
+            guess_emoji.style = 'display: none;';
+            win_emoji.style = 'display: block;';
+            player.innerHTML = 'Player 2 winner';
+            player3button.style ='display: none;';
+            player3input.style = 'display: none;';
+            notice.innerHTML = 'Congratulations';
+        }
+
+   
+   
     if (countattempttwo == 5) {
         if((player1input.value != player2input.value) && (player1input.value != player3input.value)){
             guess_emoji.style = 'display: none;';
