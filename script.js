@@ -126,8 +126,3 @@ player3button.addEventListener('click', () => {
 
 })
 
-
-
-// else if(countattempt == 5 && player1input.value != player2input.value){
-//     player.innerHTML = 'Player 1 winner'
-// }
