@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #616161;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+.notice {
+    font-size: 18px;
+    position: absolute;
+    width: 100%;
+    top: -75px;
+    left: 0;
+    transform: translateX(-25%);
+    animation: Elias 4s linear infinite alternate;
+}
+.heighlight{
+    color: red !important;
+    display: none;
+}
+
+@keyframes Elias{
+   100%{
+    transform: translateX(25%);
+   }
+}
+.game{
+    padding: 20px 100px 50px;
+    text-align: center;
+    background: #fafafa;
+    box-shadow:8px 10px 8px 6px rgb(232 235 232 / 70%);
+    position: relative;
+}
+.emoji, .err_emoji, .guess_emoji, .win_emoji{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+.err_emoji, .guess_emoji, .win_emoji{
+    display: none;
+}
+.player1input, .player2input,.player3input{
+    border: 2px solid green;
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+.player1error, .player2input, .player2button,.player2error,.player3input, .player3button,.player3error{
+    display: none;
+}
+.game button{
+    padding: 10px 15px;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.game h1{
+    color: #fff;
+    text-shadow: #033003 3px 0 2px;
+}
+.game .player{
+    color: green;
+    margin: 20px 0;
+}
+.player1error, .player2error, .player3error {
+    position: absolute;
+    bottom: 42px;
+    left: -61px;
+    width: 144px;
+    background: red;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1;
+}
+.player1error::after, .player2error::after, .player3error::after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -7px;
+    width: 30px;
+    height: 30px;
+    background: red;
+    transform: translateY(-50%) rotate(45deg);
+    z-index: -1;
+}
+
+
+
