@@ -100,7 +100,7 @@ player3button.addEventListener('click', () => {
         player.innerHTML = 'Player 2 & 3 winner';
         player3button.style ='display: none;';
         player3input.style = 'display: none;';
-        notice.innerHTML = 'Congratulations test';
+        notice.innerHTML = 'Congratulations';
         console.log(1234654)
     }else if((countattempttwo == 5) && (player1input.value == player2input.value)){
             guess_emoji.style = 'display: none;';
