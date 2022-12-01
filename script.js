@@ -21,7 +21,7 @@ let countattempttwo = 0;
 
 player1button.addEventListener("click", () => {
     if (player1input.value - 10 && player1input.value != '') {
-        if (player1input.value >= 10) {
+        if (player1input.value > 10) {
             player1input.style = 'border-color: red;';
             player1error.style = 'display: inline-block;';
             emoji.style = 'display: none;';
@@ -42,6 +42,8 @@ player1button.addEventListener("click", () => {
             notice.innerHTML = `Guess the number and you have ${heighlight.innerHTML} chance only`
         }
 
+    }else if(player1input.value == 10){
+        player1error.innerHTML = 'Please give a number less then 10';
     } else {
         player1input.style = 'border-color: red;';
         player1error.style = 'display: inline-block;';
