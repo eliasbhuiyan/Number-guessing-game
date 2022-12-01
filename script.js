@@ -42,7 +42,7 @@ player1button.addEventListener("click", () => {
             notice.innerHTML = `Guess the number and you have ${heighlight.innerHTML} chance only`
         }
 
-    }else if(player1input.value == 10){
+    }else if((player1input.value -1) == 9){
         player1error.innerHTML = 'Please give a number less then 10';
     } else {
         player1input.style = 'border-color: red;';
