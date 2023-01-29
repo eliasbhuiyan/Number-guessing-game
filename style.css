@@ -11,7 +11,7 @@ body{
     height: 100vh;
 }
 .notice {
-    font-size: 18px;
+    font-size: 30px;
     position: absolute;
     width: 100%;
     top: -75px;
